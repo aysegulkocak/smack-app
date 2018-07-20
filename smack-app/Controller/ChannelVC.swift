@@ -10,6 +10,8 @@ import UIKit
 
 class ChannelVC: UIViewController {
 
+    @IBAction func prepareForUnwind ( segue: UIStoryboardSegue){}
+    
     //Outlets
     @IBOutlet weak var loginBtn: UIButton! // We're gonna need to change the title of login button when we're actually logged in and instead of showing "login" we're gonna display the user's name.
     
