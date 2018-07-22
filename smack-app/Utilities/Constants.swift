@@ -16,6 +16,7 @@ typealias CompletionHandler = (_ Success: Bool) -> () // typealies is simply ren
 //URL Constants
 let BASE_URL = "https://chattychatychatchat.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
+let URL_LOGIN = "\(BASE_URL)account/login" // these URL are going to spesific location on the API. And so that the API knows what to do with the spesific information and the requests that it's receiving.
 
 // Segues
 let TO_LOGIN = "toLogin"
@@ -27,3 +28,8 @@ let UNWIND = "unwindToChannel"
 let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
+
+// Headers
+let HEADER = [
+    "Content-Type": "application/json; charset=utf-8"
+]
