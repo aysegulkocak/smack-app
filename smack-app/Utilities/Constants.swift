@@ -17,6 +17,7 @@ typealias CompletionHandler = (_ Success: Bool) -> () // typealies is simply ren
 let BASE_URL = "https://chattychatychatchat.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login" // these URL are going to spesific location on the API. And so that the API knows what to do with the spesific information and the requests that it's receiving.
+let URL_USER_ADD = "\(BASE_URL)user/add"
 
 // Segues
 let TO_LOGIN = "toLogin"
