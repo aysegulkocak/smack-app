@@ -19,6 +19,12 @@ let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login" // these URL are going to spesific location on the API. And so that the API knows what to do with the spesific information and the requests that it's receiving.
 let URL_USER_ADD = "\(BASE_URL)user/add"
 
+// Colors
+let smackPurplePlaceholder = #colorLiteral(red: 0.2549019608, green: 0.3160409033, blue: 0.7365054488, alpha: 0.5)
+
+// Notification Constants
+let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+
 // Segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
