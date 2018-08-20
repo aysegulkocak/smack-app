@@ -15,9 +15,12 @@ typealias CompletionHandler = (_ Success: Bool) -> () // typealies is simply ren
 
 //URL Constants
 let BASE_URL = "https://chattychatychatchat.herokuapp.com/v1/"
+//let BASE_URL = "https://chattychatjb.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login" // these URL are going to spesific location on the API. And so that the API knows what to do with the spesific information and the requests that it's receiving.
 let URL_USER_ADD = "\(BASE_URL)user/add"
+let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
+let URL_GET_CHANNELS = "\(BASE_URL)channel"
 
 // Colors
 let smackPurplePlaceholder = #colorLiteral(red: 0.2549019608, green: 0.3160409033, blue: 0.7365054488, alpha: 0.5)
@@ -39,5 +42,9 @@ let USER_EMAIL = "userEmail"
 
 // Headers
 let HEADER = [
+    "Content-Type": "application/json; charset=utf-8"
+]
+let BEARER_HEADER = [
+    "Authorization" : "Bearer \(AuthService.instance.authToken)",
     "Content-Type": "application/json; charset=utf-8"
 ]
