@@ -12,7 +12,7 @@ class ChatVC: UIViewController {
 
     //Outlets
     @IBOutlet weak var menuBtn: UIButton!
-    @IBOutlet weak var ChannelNameLabel: UILabel!
+    @IBOutlet weak var channelNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class ChatVC: UIViewController {
             // get channels
             onLoginGetMessages()
         } else {
-            ChannelNameLabel.text = "Please Log In"
+            channelNameLabel.text = "Please Log In"
         }
     }
     
@@ -50,14 +50,28 @@ class ChatVC: UIViewController {
     
     func updateWithChannel() {
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
-        ChannelNameLabel.text = "#\(channelName)"
+        channelNameLabel.text = "#\(channelName)"
+        getMessages()
     }
     
     func onLoginGetMessages() {
         MessageService.instance.findAllChannel { (success) in
             if success {
                 // Do stuff with channels
+                if MessageService.instance.channels.count > 0 {
+                    MessageService.instance.selectedChannel = MessageService.instance.channels[0]
+                    self.updateWithChannel()
+                } else {
+                    self.channelNameLabel.text = "NO Channels Yet!"
+                }
             }
+        }
+    }
+    
+    func getMessages() {
+        guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+        MessageService.instance.findAllMessageForChannel(channelId: channelId) { (success) in
+            
         }
     }
 

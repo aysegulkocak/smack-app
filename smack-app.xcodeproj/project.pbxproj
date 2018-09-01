@@ -29,6 +29,7 @@
 		D894DDBB20FD2DC800E4155F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D894DDB920FD2DC800E4155F /* LaunchScreen.storyboard */; };
 		D894DDC620FD47B900E4155F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D894DDC420FD47B800E4155F /* SWRevealViewController.m */; };
 		D898BA772104A1BD0071F762 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898BA762104A1BD0071F762 /* RoundedButton.swift */; };
+		D8AA1381213AC6D200E0DBA8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AA1380213AC6D200E0DBA8 /* Message.swift */; };
 		D8B45C392129B27B00A99580 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B45C382129B27B00A99580 /* MessageService.swift */; };
 		D8B45C3B2129D1E900A99580 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B45C3A2129D1E900A99580 /* Channel.swift */; };
 		D8BA2F122103AEC800A2B3FD /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA2F112103AEC800A2B3FD /* AuthService.swift */; };
@@ -64,6 +65,7 @@
 		D894DDC420FD47B800E4155F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		D894DDC520FD47B900E4155F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		D898BA762104A1BD0071F762 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		D8AA1380213AC6D200E0DBA8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		D8B45C382129B27B00A99580 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		D8B45C3A2129D1E900A99580 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		D8BA2F112103AEC800A2B3FD /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D8B45C3A2129D1E900A99580 /* Channel.swift */,
+				D8AA1380213AC6D200E0DBA8 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				D840A25820FE54B900BF92C5 /* ChannelVC.swift in Sources */,
 				D878415321060574002B85EA /* AvatarPickerVC.swift in Sources */,
 				D898BA772104A1BD0071F762 /* RoundedButton.swift in Sources */,
+				D8AA1381213AC6D200E0DBA8 /* Message.swift in Sources */,
 				D8B45C3B2129D1E900A99580 /* Channel.swift in Sources */,
 				D878415721064F52002B85EA /* CircleImage.swift in Sources */,
 				D8B45C392129B27B00A99580 /* MessageService.swift in Sources */,

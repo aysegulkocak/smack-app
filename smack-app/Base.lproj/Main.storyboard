@@ -584,7 +584,7 @@
                         <viewLayoutGuide key="safeArea" id="y8e-Tg-xk7"/>
                     </view>
                     <connections>
-                        <outlet property="ChannelNameLabel" destination="dBt-tJ-fC8" id="8Bn-nh-0Od"/>
+                        <outlet property="channelNameLabel" destination="dBt-tJ-fC8" id="8Bn-nh-0Od"/>
                         <outlet property="menuBtn" destination="BDk-zf-wFH" id="hXj-cj-1i9"/>
                     </connections>
                 </viewController>
