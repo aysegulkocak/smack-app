@@ -16,6 +16,7 @@ class MessageService {
     
     var channels = [Channel]() // We have place to store our channels
     var messages = [Message]() // We're going to be storing the messages for one channel at a time.
+    var unreadChannels = [String]() // We're going to put in here are the unread channels IDs.
     var selectedChannel : Channel?
     
     func findAllChannel(completion: @escaping CompletionHandler) { // Retrieves all of the channels from our API.

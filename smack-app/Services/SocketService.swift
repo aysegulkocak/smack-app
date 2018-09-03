@@ -81,6 +81,32 @@ class SocketService: NSObject {
         completion(true)
     }
     
+//  We are listening for event from the server called Message created. If we receive it we get with it a data array. We parse through that data array to get all of the information that we want. Then we do a check to make sure that the incoming message is indeed part of the channel that we care about. If so create a new message appended to our array of messages and see completion is equal to true. So that in our chatVC we can reload the table view.
+    
+    func getChatMessage(completion: @escaping (_ newMessage: Message) -> Void) {
+        socket.on("messageCreated") { (dataArray, ack) in
+            guard let msgBody = dataArray[0] as? String else { return }
+            guard let channelId = dataArray[2] as? String else { return }
+            guard let userName = dataArray[3] as? String else { return }
+            guard let userAvatar = dataArray[4] as? String else { return }
+            guard let userAvatarColor = dataArray[5] as? String else { return }
+            guard let id = dataArray[6] as? String else { return }
+            guard let timeStamp = dataArray[7] as? String else { return }
+            
+            
+            let newMessage = Message(message: msgBody, userName: userName, channelId: channelId, userAvatar: userAvatar, userAvatarColor: userAvatarColor, id: id, timeStamp: timeStamp)
+            MessageService.instance.messages.append(newMessage)
+
+            completion(newMessage)
+        }
+    }
+    
+    func getTypingUsers(_ completionHandler: @escaping (_ typingUsers: [String : String]) -> Void) {
+        socket.on("userTypingUpdate") { (dataArray, ack) in
+            guard let typingUsers = dataArray[0] as? [String : String] else { return }
+            completionHandler(typingUsers)
+        }
+    }
     
     
 }
